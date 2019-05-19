@@ -1,0 +1,32 @@
+Table 1: Rank 0 - n, ainvs, sha, sha-type.
+	Every 500,000
+
+
+Table 2: Rank 1 gen found - n, ainvs, sha, sha-type, p1.
+Table 2b: Rank 1 gen not found - n, ainvs, sha_bound, s2r, s3r, sha, sha-type, psb.
+	Every 50,000
+
+Table 3: 4 files. 
+	Rank 2 gk: n, ainvs, sha, sha_type, p1, p2.
+	Rank 2 gnk: n, ainvs, reg_sha, psb, sha_bound, s2r, s3r, sha, sha_type, p1.
+	Rank 3: n, ainvs, sha, sha_type, p1, p2, p3.
+	Rank 4: n, ainvs, sha, sha_type, p1, p2, p3, p4. 
+	
+
+Table 4: Rank 1 gen known and 5-adic regulator.
+	ainvs, reduction-type at 5, 5-adic regulator, valuation;
+	Every 100,000
+
+Table 5: Rank 1 gen known and 7-adic regulator.
+	ainvs, reduction-type at 7, 7-adic regulator, valuation;
+	Every 100,000
+		
+Table 6: Rank 1 gen known and 11-adic regulator.
+	ainvs, reduction-type at 11, 11-adic regulator, valuation;
+	Every 100,000
+
+Table 7: Rank 1 gen not known - 
+	n, ainv, lcm, sha_bound, cond5, cond7, cond11, cond13, sha, sha_type.
+
+&# 1064	0428
+	

@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta name="GENERATOR" content="Mozilla/4.05 [en] (X11; I; OSF1 V4.0 alpha) [Netscape]">
+		<title> Elliptic Curve Data </title>
+		<link rel="shortcut icon" href="http://www.loria.fr/~zimmerma/records/ECM1.ico"><!-- credit to Phil Carmody-->
+	</head>
+
+	<script language="JavaScript">
+<!--function JumpToIt(frm) { var newPage = frm.url.options[frm.url.selectedIndex].value if (newPage != "None") { window.open(newPage) } } //-->
+</script>
+
+<body bgcolor="#FFFFFF">
+	<center>
+	<h2> Elliptic Curve Data<br> by J. E. Cremona<br> University of Warwick, U.K.</h2> 
+	<p> <i>
+   	Updated <a href="https://raw.githubusercontent.com/JohnCremona/ecdata/master/doc/release_notes.md">
+2018-12-19</a> (last major update 2016-10-17)
+	</i> </p>
+	</center>
+
+<hr width="100%">
+
+<p>
+This site is a front-end to the <tt>ecdata</tt> repository, hosted at
+<a href="https://github.com/JohnCremona/ecdata">GitHub</a>, which
+contains data files for (modular) elliptic curves over <b>Q</b>, in a
+standard format to make them easily readable by other programs. For a
+typeset version of the same data (with some extra data about local
+reduction data) for conductors up to 1000, you can refer to the
+book <a href="http://www.warwick.ac.uk/staff/J.E.Cremona/book/amec.html">Algorithms
+for modular elliptic curves </a>, CUP 1992, second revised edition
+1997.  See the book's web site for more information, including errata
+for the current (2nd) edition, and errata to the first edition (not
+maintained since the appearance of the second edition). The errata
+lists include errors and omissions in the tables. The files here have
+the corrected data in them.  As of 2000 the book is out of print, and
+CUP have no plans to reprint it.
+</p>
+
+<p>
+For a more sophisticated web interface to this data and much more, use
+the <a href="http://www.lmfdb.org">LMFDB</a>.
+</p>
+
+<p>
+The files correspond to tables 1-5 in the book (Table 5 is not in the
+First Edition), with additional tables:
+<ul>
+<li>Table 6 gives the isogeny matrices between curves in each isogeny
+class;
+<li>Table 7 lists the integral points on each curve;
+<li>Table 8 gives information on which curve is optimal, and the Manin
+  constant;
+<li>Table 9 gives information on the mod-<i>p</i> Galois
+  representations attached to each curve;
+<li>Table 10 gives information on the 2-adic Galois
+  representations attached to each curve.
+<li>Table 11 gives information on the growth of torsion in number
+fields of small degree, for each curve.
+</ul>
+</p>
+
+<p>
+From September 2005, a new labelling scheme was introduced for isogeny
+classes.  The old scheme started
+A,B,...,Z,AA,BB,...,ZZ,AAA,BBB,... and had become unwieldy.  The new
+scheme is a straight base 26 encoding with a=0, b=1 etc., with the
+classes numbered from 0 and leading a's deleted:
+a,b,...,z,ba,bb,...bz,ca,cb,... .  The change to lower case is to make
+codes such as bb unambiguous between the old and new systems.  For
+conductors less than 1728 the number of isogeny classes is at most 25
+and the only change is from upper to lower case.
+</p>
+
+<p>
+We give all curves in each isogeny class.  For all classes of curves
+of conductor less than 60000, and many others, the first one listed in
+each class is proved to be the so-called "optimal" or "strong Weil"
+curve attached to each newform (referred to as optimal curves from now
+on).  For conductors above 60000, see the
+section <a href="#optimality">"Optimality and the Manin constant"</a>
+below.  Some of the data is common to all curves in the isogeny class.
+</p>
+
+<p>
+The tables currently contain data for conductors up to <b>400000</b>.
+</p>
+
+
+<h3>Acknowledgements</h3>
+<ul>
+<li>The curves were computed via modular symbols, using the C++
+library eclib (see https://github.com/JohnCremona/eclib), run on
+  machines in a variety of places, including clusters at Nottingham
+  (1999-2007) and Warwick (since 2011).  Additional data is computed
+  using a SageMath script to interface a variety of software,
+  including the following:
+</li>
+<li>
+The modular degrees for conductors over 12000 were computed using Mark
+Watkins's programs <tt>ec</tt> and <tt>sympow</tt>, via
+<tt>SageMath</tt>.
+</li>
+<li>
+Generators for many rank 1 curves were computed using either Magma's
+<tt>HeegnerPoint</tt> function (written by Mark Watkins) or
+GP's <tt>ellheegner</tt> function written by Christophe Delaunay and
+Bill Allombert, based on the same ideas of Delaunay and Watkins.
+</li>
+<li>
+The integral points for all curves were first computed using Sage in
+an implementation due to Michael Mardaus, Tobias Nagel and JEC.  For
+all curves we checked on 2018-12-19 whether these agree with Magma
+(version V2.24-1): in 207 cases Magma found more integral points
+(never fewer), and the larger lists which is hoped to be complete are here.
+</li>
+<li>
+The images of the mod <i>p</i> Galois representations were computed by
+Andrew Sutherland.
+</li>
+<li>
+The images of the 2-adic Galois representations were computed using a
+Magma program provided by Jeremy Rouse.
+</li>
+<li>
+The torsion growth data was computed by Enrique Gonzalez-Jimenez.
+</li>
+</ul>
+
+<hr>
+
+<h3>
+SUMMARY TABLES
+</h3>
+<ul>
+<li>
+<form>
+<select name="url" width=30>
+<option value="None"> Select a conductor range </option>
+https://raw.githubusercontent.com/JohnCremona/ecdata/master/count/count.00000-09999
+<option value="https://raw.githubusercontent.com/JohnCremona/ecdata/master/count/count.00000-09999">1-9999</option>
+<option value="https://raw.githubusercontent.com/JohnCremona/ecdata/master/count/count.10000-19999">10000-19999</option>
+</select>
+<input type=button value="Fetch" onClick="JumpToIt(this.form)">
+</form>
+Lists of number of curves (up to isogeny) of each individual conductor
+(each file is 10000 lines long).
+</li>
+
+<li> <a href="table.html">Table</a> showing number of curves of each
+range of 10000 conductors, sorted by rank.
+</li>
+
+</ul>
+
+
+
+<h3>
+TABLE FOUR: BSD DATA and ANALYTIC ORDERS OF SHA
+</h3>
+
+<ul>
+<li>
+<a href="https://raw.githubusercontent.com/JohnCremona/ecdata/master/allbsd/bsd.1-1000">1-1000</a>
+<p>
+Birch--Swinnerton-Dyer data for the optimal
+curve in each class, exactly as in the book.  Column headings:
+Conductor, class id letter, rank, real period w, L^(r)(1)/r!,
+regulator R, rational factor, S. Here the rational factor is
+L^(r)(1)/wRr!; when r=0 this is exact and given as a pair of integers
+(numerator denominator); when r&gt;0 it is approximate, but easily
+recognizable. Lastly, S is the value of the order of the
+Tate-Shafarevich group as predicted by B-SD (the "analytic order of
+Sha"), given the previous data and also the local factors and
+torsion. When r=0 this is exact; when r&gt;0 it is approximate, and was
+computed to several places but to save space is just entered as
+1.0. (S&gt;1 in only 4 cases, where S=4 or 9).
+</p>
+
+</li><li>
+<form>
+<select name="url" width=30>
+<option value="None">Select a conductor range</option>
+<option value="https://raw.githubusercontent.com/JohnCremona/ecdata/master/allbsd/allbsd.00000-09999">1-9999</option>
+</select>
+<input type=button value="Fetch" onClick="JumpToIt(this.form)">
+</form>
+Same as previous but with data for all the curves (not only the
+optimal ones) up to the current bound.   <br>
+Data format with sample lines:
+
+<table cellspacing="10" border="1">
+<tbody><tr>
+<th>N</th><th>C</th><th>#</th><th>curve</th><th>r</th><th>t</th>
+<th>cp</th><th>om</th><th>L</th><th>R</th><th>S</th>
+</tr>
+
+<tr>
+<td>11</td> <td>a</td> <td>1</td> <td>[0,-1,1,-10,-20]</td> <td>0</td> <td>5</td>
+<td>5</td> <td>1.269209304</td> <td>0.25384186</td> <td>1</td> <td>1</td>
+</tr>
+
+<tr>
+<td>5077</td> <td>a</td> <td>1</td> <td>[0,0,1,-7,6]</td> <td>3</td> <td>1</td>
+<td>1</td> <td>4.151687983</td> <td>1.73184990</td> <td> 0.41714355</td> <td>1.00000000</td>
+</tr>
+</tbody></table>
+where:
+<ul>
+<li> <b>N</b> = conductor
+</li><li> <b>C</b> = isogeny class (letter(s))
+</li><li> <b>#</b> = number of curve in class
+</li><li> <b>curve</b> = curve coefficients in format [a1,a2,a3,a4,a6]
+</li><li> <b>r</b> = rank
+</li><li> <b>t</b> = order of torsion
+</li><li> <b>cp</b> = product of Tamagawa factors <i>c<sub>p</sub></i>
+</li><li> <b>om</b> = real period
+</li><li> <b>L</b> = <i>L<sup>(r)</sup>(E,1)</i>/<i>r</i>!.
+</li><li> <b>R</b> = Regulator
+</li><li> <b>S</b> = (Analytic) order of Sha.
+</li></ul>
+</li>
+
+<li>
+<a href="shas.html">shas.html</a><br>
+A summary table of large Shas.  Note that up to conductor 400000
+there are 192161 elliptic curves with non-trivial Sha, with ranks 0
+(176631 curves), 1 (15509 curves), 2 (21 curves, all with
+2-torsion).
+</li></ul>
+
+<tt>john dot cremona at gmail dot com</tt>
+<hr>
+</body>
+</html>

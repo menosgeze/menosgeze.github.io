@@ -89,21 +89,22 @@
           "resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="resume-content">
               <p class="lead mb-5">
-                I consider all rank 0 elliptic curves in Cremona's database and
+                I consider all elliptic curves in Cremona's database and
                 these up to conductor one million in Stein Watkins' database.
-                These databases already contain the Tate Shafarevich group
+                For rank 0 curves, these databases already contain the Tate Shafarevich group
                 order. Using descent methods in Magma, computational algebra
                 system, and Tom Fisher's results from 5 descent, I found the
                 Tate-Shafarevich group invariants listed here, under the
                 assumption of the Birch and Swinnerton Dyer conjecture and the
                 Generalized Riemann Hypothesis (for computing ideal class
-                groups.)
+                groups.) For positive rank curves, I performed point searches
+                in SageMath using the Cocalc server. 
               </p>
 
               <ul>
                 <li>
                   <p>
-                    The column headings are: conductor, a-invariants,
+                    The column headings for the files Rank#-######-###### are: conductor, a-invariants,
                     &#1064 analytic order, &#1064 group invariants.
                   </p>
                 </li>
@@ -126,6 +127,35 @@
                       "https://raw.githubusercontent.com/menosgeze/tables/master/Rank0-Large-Sha/">
                         Rank0-Large-Sha
                       </option>
+                      [200~<option value 
+                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank1-000000-200000/">
+                      Rank1-000000-200000
+                      </option>
+                      <option value 
+                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank1-200001-400000/">
+                      Rank1-200001-400000
+                      </option>
+                      <option value 
+                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank1-400001-700000/">
+                      Rank1-400001-700000
+                      </option>
+                      <option value 
+                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank1-700001-999999/">
+                      Rank1-700001-999999
+                      </option>
+                      <option value
+                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank1-gen-unknown/">
+                      Rank1-gen-unknown
+                      </option>
+                      <option value
+                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank2-000000-999999/">
+                      Rank2-000000-999999
+                      </option>
+                      <option value
+                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank2-gens-unknown/">
+                      Rank2-gens-unknown
+                      </option>
+ 
                     </select> <input onclick="JumpToIt(this.form)" type=
                     "button" value="Fetch">
                   </form>
@@ -195,18 +225,30 @@
                 </li>
 
                 <li>
-                  <a href="rank0.pdf">rank0.pdf</a>
-                  <br>
-                  A summary table of how many rank 0 elliptic curves of each
-                  type there are. In total there are blah rank 0 elliptic
-                  curves in these tables.
+                    <a href="rank0.pdf">rank0.pdf</a>
+                    <br>
+                    A summary table of rank 0 elliptic curves classified by their
+                    Tate Shafarevich group type given by its group invariants.
+                </li>
+                <li>
+                    <a href="rank1.pdf">rank1.pdf</a>
+                    <br>
+                    A summary table of rank 1 elliptic curves classified by 
+                    their Tate Shafarevich group type given by its group
+                    invariants. 
+                </li>
+                <li> 
+                    <a href="rank_gt1.pdf">rank_greater_than_1.pdf</a>
+                    Some summary tables of elliptic curves of rank greater than
+                    1 classified by their Tate Shafarevich group type given by
+                    its group invariants. 
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      &lt;--#########################################################--&gt;
+      <!--#########################################################-->
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center"
       id="experience">
         <div class="w-100">
@@ -427,7 +469,7 @@
           </div>
         </div>
       </section>
-      &lt;--#########################################################--&gt;
+      <!--#########################################################-->
 
       <hr class="m-0">
       <!-- Bootstrap core JavaScript -->

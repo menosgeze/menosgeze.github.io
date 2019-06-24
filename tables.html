@@ -64,8 +64,6 @@
         <h1 class="mb-0">Gerardo
           <span class="text-primary">Zelaya Eufemia</span>
         </h1>
-
-
           <p class="lead mb-5">
             My research was to compute the Tate Shafarevich group order and
             type of as many rational elliptic curves as possible assuming
@@ -76,6 +74,7 @@
         </div>
       </section>
       <!--<hr class="m-0">-->
+
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center"
       id="experience">
         <div class="w-100">
@@ -161,19 +160,19 @@
                   </form>
                 </li>
                 <li>
-                  <table>
+                  <table cellspacing="10" cellpadding="5" style="text-align:center">
                     <tbody>
                       <tr>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           N
                         </th>
-                        <th>
+                        <th bgcolor="#000000"  style="text-align:center">
                           a-invs
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           &#1064 order
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           &#1064 group inv
                         </th>
                       </tr>
@@ -327,34 +326,34 @@
                  
                   <br>
                 <li>
-                  <table>
+                  <table cellspacing="10" cellpadding="5" style="text-align:center">
                     <tbody>
                       <tr>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           N
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           a-invs
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           &#1064  bound
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           &#1064 order
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           &#1064 group inv
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           reg_sha
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           s2r
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           s3r
                         </th>
-                        <th>
+                        <th bgcolor="#000000" style="text-align:center">
                           n4d
                         </th>
                       </tr>
@@ -449,227 +448,6 @@
       <!--#########################################################-->
 
 
-      <section class="resume-section p-3 p-lg-5 d-flex justify-content-center"
-      id="experience">
-        <div class="w-100">
-          <h2 class="mb-5">
-            Table 3: Rational elliptic curves of rank larger than 1
-          </h2>
-
-          <div class=
-          "resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="resume-content">
-              <p class="lead mb-5">
-                I considered all elliptic curves in Cremona's database and
-                these up to conductor one million in Stein Watkins' database of
-                conductors 2, 3 and 4. These databases do not contain the Tate
-                Shafarevich group order of these curves. Using point search
-                methods in SageMath (which uses Michael Stoll's ratpoints
-                module in PARI/GP) and point search methods in curves obtained
-                by Magma's descent methods, I found the generators of most
-                curves. Using a Diophantine inequality, I was able to determine
-                the &#1064 group order of several rank 2 elliptic curves
-                where I did not find the a second generator of the Mordell Weil
-                group.
-              </p>
-
-              <ul>
-                <li>
-                  <p>
-                    The column headings for the file of rank 2 elliptic curves
-                    are: conductor, a-invarinats, &#1064 analytic order,
-                    &#1064 group invariants, 1st generator, 2nd generator.
-                    For the rank 3 and rank 4 elliptic curves, there are two
-                    more entries that contain the rest of the generators. The
-                    column headings for the file of rank 2 elliptic curves
-                    where the second generator is not known are: conductor,
-                    a-invariants, &#1064 analytic order, &#1064 group
-                    invariants, a non-torsion generator, the group ranks of the
-                    2-torsion and 3-torsion parts of &amp;#10264, and the naive
-                    logarithmic height bound for the point search performed in
-                    SageMath.
-                  </p>
-                </li>
-
-                <li>
-                  <form>
-                    <select name="url" width="30">
-                      <option value="None">
-                        Select a conductor range
-                      </option>
-                      <option value=
-                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank2-gens-known/">
-                        Rank2-gens-known
-                      </option>
-                      <option value=
-                      "https://raw.githubusercontent.com/menosgeze/tables/master/Rank2-gens-unknown/">
-                        Rank2-gens-unknown
-                      </option>
-                    </select> <input onclick="JumpToIt(this.form)" type=
-                    "button" value="Fetch">
-                  </form>
-
-                  <br>
-
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>
-                          N
-                        </th>
-                        <th>
-                          a-invs
-                        </th>
-                        <th>
-                          &#1064 order
-                        </th>
-                        <th>
-                          &#1064 group inv
-                        </th>
-                        <th>
-                          1st generator
-                        </th>
-                        <th>
-                          2nd generator
-                        </th>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          998886
-                        </td>
-                        <td>
-                          [1,0,0,-31964352,-69560645220]
-                        </td>
-                        <td>
-                          4
-                        </td>
-                        <td>
-                          [2,2]
-                        </td>
-                        <td>
-                          (60492,14780394)
-                        </td>
-                        <td>
-                          (2998292,5190207374)
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  Or:
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>
-                          N
-                        </th>
-                        <th>
-                          a-invs
-                        </th>
-                        <th>
-                          &#1064 order
-                        </th>
-                        <th>
-                          &#1064 group inv
-                        </th>
-                        <th>
-                          1st generator
-                        </th>
-                        <th>
-                          s2r
-                        </th>
-                        <th>
-                          s3r
-                        </th>
-                        <th>
-                          psb
-                        </th>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          606015
-                        </td>
-                        <td>
-                          [1,-1,1,-2616540370823,-1629067573052867294]
-                        </td>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          [0]
-                        </td>
-                        <td>
-                          (-3589933141/3844,111290214311/238328)
-                        </td>
-                        <td>
-                          0
-                        </td>
-                        <td>
-                          0
-                        </td>
-                        <td>
-                          25
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  where:
-                  <ul>
-                    <li>
-                      <b>N</b> = conductor
-                    </li>
-
-                    <li>
-                      <b>ainvs</b> = a-invariants of the minimal model of the
-                      elliptic curve
-                    </li>
-
-                    <li>
-                      <b>&#1064 order</b> = the analytic order of the
-                      Tate-Shafarevich group
-                    </li>
-
-                    <li>
-                      <b>&#1064 type</b> = the list of group invariants of
-                      the Tate-Shafarevich group
-                    </li>
-
-                    <li>
-                      <b>1st, 2nd, 3rd, 4th generator</b> = one non-torsion
-                      generator of the Mordell Weil group
-                    </li>
-
-                    <li>
-                      <b>s2r</b> = The group rank of the 2-primary part of the
-                      Tate-Shafarevich group
-                    </li>
-
-                    <li>
-                      <b>s3r</b> = The group rank of the 3-primary part of the
-                      Tate-Shafarevich group
-                    </li>
-
-                    <li>
-                      <b>psb</b> = The naive logarithmic height bound for the
-                      point search performed in SageMath.
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="rank2.pdf">rank2.pdf</a>
-                  <br>
-                  A summary table of how many rank 2 elliptic curves of each
-                  type there are. In total there are blah rank 2 elliptic
-                  curves in these tables.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--#########################################################-->
 
       <hr class="m-0">
       <!-- Bootstrap core JavaScript -->
